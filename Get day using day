@@ -1,0 +1,85 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+
+using namespace std;
+
+int
+main ()
+{
+    cout<<"jan feb mar apr may june july aug sept oct nov dec"<<endl;
+  int date, year;
+  string month;
+  cout << "Enter The date ";
+  cin >> date;
+  cout << "Enter The month ";
+  cin >> month;
+  cout << "Enter The year ";
+  cin >> year;
+  int sum;
+  int last = year % 100;
+  int yo = last / 4;
+  string week[7] =
+    { "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thrushday",
+    "Friday"
+  };
+  if (month == "jan" || month == "oct")
+    {
+      sum = (date + last + yo + 0) % 7;
+    }
+  else if (month == "feb" || month == "mar" || month == "nov")
+    {
+      sum = (date + last + yo + 3) % 7;
+    }
+  else if (month == "apr" || month == "july")
+    {
+      sum = (date + last + yo + 6) % 7;
+    }
+  else if (month == "may")
+    {
+      sum = (date + last + yo + 1) % 7;
+    }
+  else if (month == "june")
+    {
+      sum = (date + last + yo + 4) % 7;
+    }
+  else if (month == "dec" || month == "sept")
+    {
+      sum = (date + last + yo + 5) % 7;
+
+    }
+  else if (month == "aug")
+    {
+      sum = (date + last + yo + 2) % 7;
+
+    }
+  if (year <= 2000)
+    {
+      sum += 1;
+    }
+  cout << "Its " << week[sum]<<"!";
+  return 0;
+}
+
+// Jan 0 {}
+// Feb 3 {}
+// march 3{}
+// Apr 6{}
+// May 1{}
+// June 4{}
+// Jul 6{}
+// Aug 2
+// Sept 5
+// Oct 0{}
+// Nov 3 {}
+// Dec 5
+
+
+
+
