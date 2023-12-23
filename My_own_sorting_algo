@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+       int size;
+
+    cout<<"size ";
+    cin>>size;
+    int count =0;
+    int arr[size];
+    int i;
+    for(i=0;i<size;i++){
+        cout<<"Enter The Element ";
+        cin>>arr[i];
+    }
+    for(i=0;i<size;i++){
+        if(i==size-1){
+          i=0;
+          count++;
+      }
+      if(count==size-1){
+          break;
+      }
+        if(arr[i]>arr[i+1]){
+          
+            int hii=arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=hii;
+            
+        }
+       
+      
+      
+        
+    }
+for(i=0;i<size;i++){
+    cout<<arr[i];
+}
+
+    return 0;
+}
